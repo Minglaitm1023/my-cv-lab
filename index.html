@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Chan - CV Homepage</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.5;
+  }
+  .banner {
+    background-color: #f0f4f8;
+    color: #004085;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #d0e0f0;
+  }
+  .container {
+    display: flex;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 32px;
+  }
+  .sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    padding-right: 20px;
+    border-right: 1px solid #e2e8f0;
+  }
+  .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .sidebar h2 { font-size: 16px; margin: 0 0 6px; color: #0056b3; }
+  .sidebar p { margin: 0 0 16px; font-size: 14px; }
+  .sidebar ul { list-style: none; padding: 0; margin: 0 0 16px; font-size: 14px; }
+  .sidebar li { margin-bottom: 6px; }
+  .btn-export {
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .main-content { flex-grow: 1; }
+  h1, h2, h3 { color: #0056b3; }
+  h1 { margin-top: 0; font-size: 24px; }
+  section { margin-bottom: 20px; }
+  section h2 { font-size: 18px; border-bottom: 1px solid #0056b3; padding-bottom: 4px; margin-bottom: 10px; }
+  .project-item { margin-bottom: 12px; }
+  .project-item h3 { font-size: 15px; margin: 0 0 4px; }
+  .project-item p { margin: 0; font-size: 14px; }
+  @media (max-width: 640px) {
+    .container { flex-direction: column; gap: 20px; padding: 16px; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; padding-right: 0; padding-bottom: 20px; }
+  }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { font-size: 13px; line-height: 1.4; }
+    .banner, .btn-export { display: none !important; }
+    .container { display: flex; flex-direction: row; padding: 0; gap: 24px; max-width: 100%; }
+    .sidebar { width: 180px; border-right: 1px solid #e2e8f0; }
+    section { margin-bottom: 14px; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="banner">Example: Fictional classroom profile</div>
+  <div class="container">
+    <aside class="sidebar">
+      <img class="avatar" src="avatar.png" alt="Illustration of Alex Chan">
+      <h2>Alex Chan</h2>
+      <p style="margin-top: 10px;"><strong>Education:</strong>Seconf-year Computing Studies</p>
+<p style="margin-top: 10px;"><strong>Interests</strong></p>
+      <ul>
+        <li>Web design</li>
+        <li>Cybersecurity</li>
+      </ul>
+      <button class="btn-export" onclick="window.print()">Export PDF</button>
+    </aside>
+    
+    <main class="main-content">
+      <h1>Curriculum Vitae</h1>
+      <section>
+        <h2>About</h2>
+        <p>Computing student currently in second-year computing studies with interests in web design and cybersecurity.</p>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <p>Second-year computing studies.</p>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>Beginner HTML</li>
+          <li>Beginner CSS</li>
+          <li>Beginner Python</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <div class="project-item">
+          <h3>Study Planner</h3>
+          <p>A simple HTML/CSS page.</p>
+        </div>
+        <div class="project-item">
+          <h3>Python Quiz</h3>
+          <p>A practice quiz with a score counter, still adding questions.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
